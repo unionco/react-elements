@@ -35,25 +35,10 @@ export const createColorData = (data = {}, colorCatName = '') => {
 };
 
 
-export const createColorModifiers = (colors = {}) => (props) => {
-  const colorData = createColorData(colors);
-
-  return colorMods.reduce((allColors, { propName, cssProp }) => {
-    const colorName = props[propName];
-    const validColor = colorData[colorName];
-  
-    if (validColor) {
-      allColors += `${cssProp}: ${validColor};\n`;
-    }
-
-    return allColors;
-  }, '');
-};
-
-export const createDefaultColorModifiers = ({ theme, ...props }) => {
+export const createColorModifiers = (colorModifiers = []) => ({ theme, ...props }) => {
   const colors = _get(theme, 'colors') || _get(baseSettings, 'colors', {});
 
-  return colorMods.reduce((allColors, { propName, cssProp }) => {
+  return colorModifiers.reduce((allColors, { propName, cssProp }) => {
     const colorName = props[propName];
     const validColor = colors[colorName];
 
@@ -65,6 +50,6 @@ export const createDefaultColorModifiers = ({ theme, ...props }) => {
   }, '');
 };
 
-const colors = createDefaultColorModifiers;
+const colors = createColorModifiers(colorMods);
 
 export default colors;

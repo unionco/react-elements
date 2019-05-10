@@ -14,7 +14,7 @@ const numberParseBlacklist = [
     prop: ['cols', 'offsetCols']
   },
   {
-    prop: 'flex'
+    prop: ['border', 'flex'],
   },
   {
     prop: ['border-width', 'border-top-width', 'border-right-width', 'border-bottom-width', 'border-left-width'],
@@ -44,7 +44,7 @@ const parsePropertyValue = (cssProp, propVal, theme) => {
   });
   let cssPropVal = propVal;
 
-  if (!isNaN(parsedPropVal)) {
+  if (!isNaN(parsedPropVal) && !/\s/g.test(propVal)) {
     const threshold = _get(blacklistItem, 'threshold');
 
     if (blacklistItem) {

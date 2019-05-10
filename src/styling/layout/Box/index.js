@@ -1,19 +1,22 @@
 import styled from 'styled-components';
 
-import spacing from 'layout/spacing';
-import display from 'layout/display';
 import align from 'layout/align';
+import borders, { borderColor } from 'style/borders';
+import colors from 'style/color';
+import display from 'layout/display';
+import spacing from 'layout/spacing';
 import textAlign from 'style/text/align';
 import textSize from 'style/text/size';
-import colors from 'style/color';
 
 const Box = styled.div`
   box-sizing: border-box;
 
-  ${display}
   ${align}
-  ${spacing}
+  ${borders}
+  ${borderColor}
   ${colors}
+  ${display}
+  ${spacing}
   ${textAlign}
   ${textSize}
 `;

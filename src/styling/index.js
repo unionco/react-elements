@@ -21,12 +21,15 @@ export {
   Row,
 } from 'layout/grid';
 export { default as align } from 'layout/align';
+export {
+  default as borders,
+  borderColor,
+} from 'style/borders';
 export { default as Box } from 'layout/Box';
 export {
   default as colors,
   createColorData,
   createColorModifiers,
-  createDefaultColorModifiers,
 } from 'style/color'
 export { default as display } from 'layout/display';
 export { default as spacing } from 'layout/spacing';

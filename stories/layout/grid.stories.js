@@ -62,6 +62,7 @@ storiesOf('Layout', module)
             bgColor="grayScaleGray2"
             color="grayScaleWhite"
             padding={{ small: 20 }}
+            border={{ small: '2px solid grayScaleBlack', medium: '5px solid grayScaleGray3' }}
           >
             <p>Hello</p>
           </Box>
@@ -74,6 +75,8 @@ storiesOf('Layout', module)
             bgColor="grayScaleGray2"
             color="grayScaleWhite"
             padding={{ small: 10, large: 30 }}
+            borderLeft={{ small: '5px solid grayScaleGray3' }}
+            borderColor={{ medium: 'grayScaleBlack' }}
           >
             <p>Hello</p>
           </Box>

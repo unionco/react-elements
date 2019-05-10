@@ -76,6 +76,8 @@ export {
 
 export {
   align,
+  borderColor,
+  borders,
   Box,
   clearfix,
   colors,
@@ -83,7 +85,6 @@ export {
   createBreakpointModifiers,
   createColorData,
   createColorModifiers,
-  createDefaultColorModifiers,
   disabled,
   display,
   ElementsTheme,
