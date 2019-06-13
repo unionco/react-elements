@@ -1,7 +1,6 @@
 # Union React Elements
 
-**Security Note**  
-This repo is intentionally private. If this code is to be open-sourced or otherwise shared, please ensure private history, private issue conversations, etc... are not included. Particularly, conversations about content which is bound by an NDA.
+View [storybook](https://react-elements.netlify.com)
 
 A React component library that can be added to your project as an [NPM module](https://www.npmjs.com/package/@union/react-elements).
 
